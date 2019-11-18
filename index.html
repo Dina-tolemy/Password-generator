@@ -18,14 +18,63 @@
     <div class="mainContent">
         <h2>Generate a Password</h2>
         <div class="password1">
-        <textarea readonly id="password" placeholder="Your Secure Password" aria-label="Generated Password"></textarea>
+            <textarea readonly id="password" placeholder="Your Secure Password" aria-label="Generated Password"></textarea>
         </div>
         <br>
-        <button id="generate">Generate Password</button>
+        <button id="generate" onclick="generatePassword()">Generate Password</button>
         <button id="copy">
        Copy to Clipboard 
      </button>
     </div>
+
+    <!-- script -->
+    <script>
+        function generatePassword() {
+
+            var wantNumbers = confirm("do you need numbers in your password");
+
+            if (wantNumbers) {
+
+               
+                function makePass(length) {
+                    var result = '';
+                    var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+                    var charactersLength = characters.length;
+                    for (var i = 0; i < length; i++) {
+                        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+                    }
+                    return result;
+
+                }
+
+                  document.getElementById("password").innerHTML = makePass(6);
+
+
+            }
+            else { 
+
+ function makePass(length) {
+                    var result = '';
+                    var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+                    var charactersLength = characters.length;
+                    for (var i = 0; i < length; i++) {
+                        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+                    }
+                    return result;
+
+                }
+
+                  document.getElementById("password").innerHTML = makePass(6);
+
+
+
+            }
+
+
+
+
+        }
+    </script>
 </body>
 
 </html>
