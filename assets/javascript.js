@@ -2,19 +2,22 @@
 
 function generatePassword() {
 
-    var wantNumbers = confirm("do you need numbers in your password");
-    var wantSpecial = confirm("do you need special characters in your password");
+    var pLength = parseInt(prompt("Enter your wanted lenghth for your password must be between 8 and 120:"));
+
+    var wantNumbers = confirm("Do you need numbers");
+    var wantSpecial = confirm("Do you need special characters");
+    var capitalChar = confirm("Do you want capital characters")
 
 
-    if (wantNumbers && wantSpecial) {
+
+    if (wantNumbers && wantSpecial && capitalChar) {
 
 
-        function makePass(length) {
+        function makePass(pLength) {
             var charResult = '';
-            var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+            var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234567891011121314151617181920!"#$%&()*+, -./:;<=>?@[\]^_`{|}~';
             var charactersLength = characters.length;
-
-            for (var i = 0; i < length; i++) {
+            for (var i = 0; i < pLength; i++) {
                 charResult += characters.charAt(Math.floor(Math.random() * charactersLength));
             }
 
@@ -23,130 +26,169 @@ function generatePassword() {
 
         }
 
-        function makePass3(length) {
-            var sResult = '';
-            var sCharacters = '@#$%^&*!';
-            var sCharactersLength = sCharacters.length;
 
-            for (var i = 0; i < length; i++) {
-                sResult += sCharacters.charAt(Math.floor(Math.random() * sCharactersLength));
-            }
-
-
-            return sResult;
-
-
-        }
-
-
-        function makePass2(length) {
-            var numResult = '';
-            var numbers = '0123456789';
-            var numbersLength = numbers.length;
-            for (var i = 0; i < length; i++) {
-                numResult += numbers.charAt(Math.floor(Math.random() * numbersLength));
-            }
-            return numResult;
-
-        }
-
-
-        document.getElementById("password").innerHTML = makePass2(2) + makePass(6) + makePass3(2);
+        document.getElementById("password").innerHTML = makePass(pLength);
 
     }
 
 
 
 
-    else if (wantNumbers == true && wantSpecial == false) {
+    else if (wantNumbers && wantSpecial && capitalChar == false) {
 
-
-        function makePass2(length) {
-            var numResult = '';
-            var numbers = '0123456789';
-            var numbersLength = numbers.length;
-            for (var i = 0; i < length; i++) {
-                numResult += numbers.charAt(Math.floor(Math.random() * numbersLength));
+        function makePass(pLength) {
+            var charResult = '';
+            var characters = 'abcdefghijklmnopqrstuvwxyz0123456789101112131415161718192!"#$%&()*+, -./:;<=>?@[\]^_`{|}~';
+            var charactersLength = characters.length;
+            for (var i = 0; i < pLength; i++) {
+                charResult += characters.charAt(Math.floor(Math.random() * charactersLength));
             }
-            return numResult;
+
+
+            return charResult;
 
         }
 
 
-        function makePass(length) {
-            var result = '';
+        document.getElementById("password").innerHTML = makePass(pLength);
+
+    }
+
+    else if (wantNumbers && wantSpecial == false && capitalChar) {
+
+        function makePass(pLength) {
+            var charResult = '';
+            var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789111213141516171819';
+            var charactersLength = characters.length;
+            for (var i = 0; i < pLength; i++) {
+                charResult += characters.charAt(Math.floor(Math.random() * charactersLength));
+            }
+
+
+            return charResult;
+
+        }
+
+
+        document.getElementById("password").innerHTML = makePass(pLength);
+
+
+
+    }
+
+
+
+
+
+    else if (wantNumbers == false && wantSpecial && capitalChar) {
+
+
+        function makePass(pLength) {
+            var charResult = '';
+            var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!"#$%&()*+, -./:;<=>?@[\]^_`{|}~';
+            var charactersLength = characters.length;
+            for (var i = 0; i < pLength; i++) {
+                charResult += characters.charAt(Math.floor(Math.random() * charactersLength));
+            }
+
+
+            return charResult;
+
+        }
+
+
+        document.getElementById("password").innerHTML = makePass(pLength);
+
+
+    }
+
+    else if (wantNumbers == false && wantSpecial == false && capitalChar) {
+
+        function makePass(pLength) {
+            var charResult = '';
             var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
             var charactersLength = characters.length;
-            for (var i = 0; i < length; i++) {
+            for (var i = 0; i < pLength; i++) {
+                charResult += characters.charAt(Math.floor(Math.random() * charactersLength));
+            }
+
+
+            return charResult;
+
+        }
+
+
+        document.getElementById("password").innerHTML = makePass(pLength);
+
+
+
+    }
+
+    else if (wantNumbers == false && wantSpecial && capitalChar == false) {
+
+        function makePass(pLength) {
+            var charResult = '';
+            var characters = 'abcdefghijklmnopqrstuvwxyz!"#$%&()*+, -./:;<=>?@[\]^_`{|}~';
+            var charactersLength = characters.length;
+            for (var i = 0; i < pLength; i++) {
+                charResult += characters.charAt(Math.floor(Math.random() * charactersLength));
+            }
+
+
+            return charResult;
+
+        }
+
+
+        document.getElementById("password").innerHTML = makePass(pLength);
+
+
+
+    }
+
+
+    else if (wantNumbers && wantSpecial == false && capitalChar == false) {
+
+
+        function makePass(pLength) {
+            var charResult = '';
+            var characters = 'abcdefghijklmnopqrstuvwxyz01234567891011121314151617181920';
+            var charactersLength = characters.length;
+            for (var i = 0; i < pLength; i++) {
+                charResult += characters.charAt(Math.floor(Math.random() * charactersLength));
+            }
+
+
+            return charResult;
+
+        }
+
+
+        document.getElementById("password").innerHTML = makePass(pLength);
+
+    }
+
+
+    else {
+
+        function makePass(pLength) {
+            var result = '';
+            var characters = 'abcdefghijklmnopqrstuvwxyz';
+            var charactersLength = characters.length;
+            for (var i = 0; i < pLength; i++) {
                 result += characters.charAt(Math.floor(Math.random() * charactersLength));
             }
             return result;
 
         }
 
-        document.getElementById("password").innerHTML = makePass(6) + makePass2(4);
-
-
-
-    }
-
-
-    else if (wantNumbers == false && wantSpecial == true) {
-
-        function makePass3(length) {
-            var sResult = '';
-            var sCharacters = '@#$%^&*!';
-            var sCharactersLength = sCharacters.length;
-
-            for (var i = 0; i < length; i++) {
-                sResult += sCharacters.charAt(Math.floor(Math.random() * sCharactersLength));
-            }
-
-
-            return sResult;
-
-
-        }
-
-
-
-
-        function makePass(length) {
-            var result = '';
-            var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
-            var charactersLength = characters.length;
-            for (var i = 0; i < length; i++) {
-                result += characters.charAt(Math.floor(Math.random() * charactersLength));
-            }
-            return result;
-
-        }
-
-        document.getElementById("password").innerHTML = makePass(6) + makePass3(4);
-
+        document.getElementById("password").innerHTML = makePass(pLength);
 
 
     }
 
-    else{
-
-       function makePass(length) {
-            var result = '';
-            var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
-            var charactersLength = characters.length;
-            for (var i = 0; i < length; i++) {
-                result += characters.charAt(Math.floor(Math.random() * charactersLength));
-            }
-            return result;
-
-        }
-
-        document.getElementById("password").innerHTML = makePass(10);
 
 
-
-
-    }
 
 
 
