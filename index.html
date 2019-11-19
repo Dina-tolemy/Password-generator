@@ -28,53 +28,7 @@
     </div>
 
     <!-- script -->
-    <script>
-        function generatePassword() {
-
-            var wantNumbers = confirm("do you need numbers in your password");
-
-            if (wantNumbers) {
-
-               
-                function makePass(length) {
-                    var result = '';
-                    var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-                    var charactersLength = characters.length;
-                    for (var i = 0; i < length; i++) {
-                        result += characters.charAt(Math.floor(Math.random() * charactersLength));
-                    }
-                    return result;
-
-                }
-
-                  document.getElementById("password").innerHTML = makePass(6);
-
-
-            }
-            else { 
-
- function makePass(length) {
-                    var result = '';
-                    var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
-                    var charactersLength = characters.length;
-                    for (var i = 0; i < length; i++) {
-                        result += characters.charAt(Math.floor(Math.random() * charactersLength));
-                    }
-                    return result;
-
-                }
-
-                  document.getElementById("password").innerHTML = makePass(6);
-
-
-
-            }
-
-
-
-
-        }
-    </script>
+    <script src="./assets/javascript.js">    </script>
 </body>
 
 </html>
