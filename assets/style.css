@@ -11,36 +11,40 @@ h1 {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.mainContent {
+.content {
     background-color: white;
     padding: 20px;
-    margin-left: 300px;
-    margin-right: 300px;
+    margin-left: 200px;
+    margin-right: 200px;
     margin-top: 50px;
-    height: 700px;
+    height: 500px;
+    width: 700px;
+
 }
 
 h2 {
-    margin: 10px;
+    margin:20px 20px 20px 30px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: #001a33;
     font-style: bolder;
+    text-align: center;
 }
 
 #password {
-    width: 600px;
-    height: 400px;
+  
     text-align: center;
     border: 1px dashed gray;
-    margin: 20px;
     margin: 30px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     padding: 20px;
+   
 }
 
 .password1 {
     border-bottom: 2px solid lightgray;
     border-top: 2px solid lightgray;
+    text-align: center;
+    margin-left:  50px;
 }
 
 #generate {
@@ -50,9 +54,10 @@ h2 {
     font-size: 26px;
     text-align: center;
     border-radius: 30pt;
-    margin-right: 10px;
     font-style: bold;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 10px;
+    margin-left: 200px;
 }
 
 #copy {
@@ -62,7 +67,70 @@ h2 {
     font-size: 26px;
     text-align: center;
     border-radius: 30pt;
-    margin-left: 10px;
     font-style: bold;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 10px;
+    margin-right: 200px;
 }
+
+
+@media screen and (max-width: 1024px){
+
+ .content{
+
+    width: 500;
+    margin-left: 120px;
+
+    }
+ #generate{
+    margin-left:150px ;
+}
+
+#copy{
+
+
+    margin-right: 150px;
+}
+}
+
+ @media screen and (max-width: 768px){
+
+    .content{
+
+    width: 400;
+    margin-left: 10px;
+
+    }
+
+    #generate{
+    margin-left: 40px;
+}
+#copy{
+
+
+    margin-right: 20px;
+}
+
+
+
+ }
+
+ @media screen and (max-width: 500px){
+
+    .content{
+
+    width: 250;
+    margin-left: 0px;
+    
+
+    }
+#generate{
+    margin-left: 20px;
+}
+#copy{
+
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+ }

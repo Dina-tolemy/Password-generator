@@ -1,18 +1,12 @@
 
 
 function generatePassword() {
-
     var pLength = parseInt(prompt("Enter your wanted lenghth for your password must be between 8 and 120:"));
-
     var wantNumbers = confirm("Do you need numbers");
     var wantSpecial = confirm("Do you need special characters");
-    var capitalChar = confirm("Do you want capital characters")
-
-
+    var capitalChar = confirm("Do you want capital characters");
 
     if (wantNumbers && wantSpecial && capitalChar) {
-
-
         function makePass(pLength) {
             var charResult = '';
             var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234567891011121314151617181920!"#$%&()*+, -./:;<=>?@[\]^_`{|}~';
@@ -194,4 +188,10 @@ function generatePassword() {
 
 
 
+}
+
+function copy() {
+  let password = document.getElementById("password");
+  password.select();
+  document.execCommand("copy");
 }

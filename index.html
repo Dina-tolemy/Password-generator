@@ -10,25 +10,43 @@
     <title>Password Generator</title>
 </head>
 
+<header>
+    <h1>Password Generator</h1>
+</header>
+
 <body>
-    <header>
-        <h1>Password Generator</h1>
-    </header>
+    <div class="container">
+        <div class="content">
+            <div class="row">
 
-    <div class="mainContent">
-        <h2>Generate a Password</h2>
-        <div class="password1">
-            <textarea readonly id="password" placeholder="Your Secure Password" aria-label="Generated Password"></textarea>
+                <div class="col-xs-12">
+                    <h2>Generate a Password</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="password1">
+                        <textarea readonly id="password" placeholder="Your Secure Password" aria-label="Generated Password"></textarea>
+                    </div>
+                </div>
+            </div>
+
         </div>
-        <br>
-        <button id="generate" onclick="generatePassword()">Generate Password</button>
-        <button id="copy">
-       Copy to Clipboard 
-     </button>
-    </div>
 
+        <div class="row">
+            <div class="col-xs-12 col-md-6">
+                <button id="generate" onclick="generatePassword()">Generate Password</button>
+            </div>
+            <div class="col-xs-6 col-md-6">
+                <button id="copy" onclick="copy()"> Copy to Clipboard </button>
+            </div>
+        </div>
+    </div>
+    </div>
     <!-- script -->
-    <script src="./assets/javascript.js">    </script>
+    <script src="./assets/javascript.js">
+
+    </script>
 </body>
 
 </html>
