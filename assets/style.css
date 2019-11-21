@@ -19,11 +19,10 @@ h1 {
     margin-top: 50px;
     height: 500px;
     width: 700px;
-
 }
 
 h2 {
-    margin:20px 20px 20px 30px;
+    margin: 20px 20px 20px 30px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: #001a33;
     font-style: bolder;
@@ -31,20 +30,18 @@ h2 {
 }
 
 #password {
-  
     text-align: center;
     border: 1px dashed gray;
     margin: 30px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     padding: 20px;
-   
 }
 
 .password1 {
     border-bottom: 2px solid lightgray;
     border-top: 2px solid lightgray;
     text-align: center;
-    margin-left:  50px;
+    margin-left: 50px;
 }
 
 #generate {
@@ -73,64 +70,42 @@ h2 {
     margin-right: 200px;
 }
 
-
-@media screen and (max-width: 1024px){
-
- .content{
-
-    width: 500;
-    margin-left: 120px;
-
+@media screen and (max-width: 1024px) {
+    .content {
+        width: 500;
+        margin-left: 120px;
     }
- #generate{
-    margin-left:150px ;
-}
-
-#copy{
-
-
-    margin-right: 150px;
-}
-}
-
- @media screen and (max-width: 768px){
-
-    .content{
-
-    width: 400;
-    margin-left: 10px;
-
+    #generate {
+        margin-left: 150px;
     }
-
-    #generate{
-    margin-left: 40px;
-}
-#copy{
-
-
-    margin-right: 20px;
-}
-
-
-
- }
-
- @media screen and (max-width: 500px){
-
-    .content{
-
-    width: 250;
-    margin-left: 0px;
-    
-
+    #copy {
+        margin-right: 150px;
     }
-#generate{
-    margin-left: 20px;
-}
-#copy{
-
-    margin-left: 20px;
-    margin-right: 10px;
 }
 
- }
+@media screen and (max-width: 768px) {
+    .content {
+        width: 400;
+        margin-left: 10px;
+    }
+    #generate {
+        margin-left: 40px;
+    }
+    #copy {
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .content {
+        width: 250;
+        margin-left: 0px;
+    }
+    #generate {
+        margin-left: 20px;
+    }
+    #copy {
+        margin-left: 20px;
+        margin-right: 10px;
+    }
+}
